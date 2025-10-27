@@ -1,3 +1,1 @@
 *Build* ${jobName} #${buildStatus}
-${prefix}
-
