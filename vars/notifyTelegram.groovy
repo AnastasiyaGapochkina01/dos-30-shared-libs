@@ -1,4 +1,4 @@
-def call(String prefix, String botToken, String chatId) {
+def call(String botToken, String chatId) {
   def jobName = env.JOB_NAME ?: "Unknown job"
   def buildStatus = currentBuild.currentResult ?: "UNKNOWN"
 
