@@ -15,7 +15,7 @@ def call(String prefix, String botToken, String chatId) {
   sh """
     curl -s -X POST -H "Content-Type: application/json" https://api.telegram.org/bot${botToken}/sendMessage \
     -d chat_id=${chatId} \
-    -d text="${msg.replace("\"", "\\\"")} \
+    -d text="${msg.replace("\"", "\\\"")}" \
     -d parse_mode=Markdown
   """
 }
