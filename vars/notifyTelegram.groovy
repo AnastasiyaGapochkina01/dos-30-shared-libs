@@ -13,7 +13,7 @@ def call(String prefix, String botToken, String chatId) {
   
 
   sh """
-    curl -s -X POST https://api.telegram.org/bot${botToken}/sendMessage \
+    curl -s -X POST -H 'Content-Type: application/json' https://api.telegram.org/bot${botToken}/sendMessage \
     -d '{chat_id: ${chatId}, text: ${msg}, parse_mode: Markdown}'
   """
 }
